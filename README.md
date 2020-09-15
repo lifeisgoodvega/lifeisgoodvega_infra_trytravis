@@ -27,3 +27,14 @@ someinternalhost_IP = 10.129.0.19
 # Домашнее задание 4
 testapp_IP = 84.201.142.132
 testapp_port = 9292
+
+Для использования метаданных cloud-config использовал следующую команду
+
+yc compute instance create \
+  --name reddit-app-2 \
+  --hostname reddit-app-2 \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-b,nat-ip-version=ipv4 \
+  --metadata serial-port-enable=1 \
+  --metadata-from-file user_data=./metadata.yaml
