@@ -23,3 +23,7 @@ Host someinternalhost
 
 bastion_IP = 84.201.155.49
 someinternalhost_IP = 10.129.0.19
+
+# Домашнее задание 4
+testapp_IP = 84.201.142.132
+testapp_port = 9292
