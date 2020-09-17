@@ -38,3 +38,17 @@ yc compute instance create \
   --network-interface subnet-name=default-ru-central1-b,nat-ip-version=ipv4 \
   --metadata serial-port-enable=1 \
   --metadata-from-file user-data=./metadata.yaml
+
+# Домашнее задание 5
+
+Команда запуска для параметризованного шаблона packer:
+
+packer build -var-file=variables.json ./ubuntu16.json
+
+Для запуска с "запечённым" reddit'ом
+
+packer build -var-file=variables.json ./immutable.json
+
+В files были вынесен скрипт для запуска reddit'а и файл сервиса для systemd unit
+
+Скрипт для создания ВМ с использованием reddit-full family находится в config-scripts/create-reddit-vm.sh
