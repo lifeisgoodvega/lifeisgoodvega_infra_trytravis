@@ -45,6 +45,9 @@ yc compute instance create \
 
 packer build -var-file=variables.json ./ubuntu16.json
 
+В variables.json.example выдуманные значения.
+fake_key был создан, чтобы пройти Travis
+
 Для запуска с "запечённым" reddit'ом
 
 packer build -var-file=variables.json ./immutable.json

@@ -1,5 +1,5 @@
 {
-    "service_account_key_file": "/baz/baz/baz.json",
+    "service_account_key_file": "fake_key",
     "folder_id": "foo",
     "source_image_family": "bar"
 }
