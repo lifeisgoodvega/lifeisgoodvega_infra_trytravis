@@ -4,16 +4,33 @@ provider "yandex" {
   folder_id                = var.folder_id
   zone                     = var.zone
 }
+
+terraform {
+  backend "s3" {
+    endpoint   = "storage.yandexcloud.net"
+    bucket     = "lifeisgoodvega-terraform-state"
+    region     = "ru-central-1"
+    key        = "terraform.tfstate"
+    access_key = "xxx"
+    secret_key = "xxx"
+
+    skip_region_validation      = true
+    skip_credentials_validation = true
+  }
+}
+
 module "app" {
-  source          = "../modules/app"
-  public_key_path = var.public_key_path
-  app_disk_image  = var.app_disk_image
-  subnet_id       = var.subnet_id
+  private_key_path = var.private_key_path
+  source           = "../modules/app"
+  public_key_path  = var.public_key_path
+  app_disk_image   = var.app_disk_image
+  subnet_id        = var.subnet_id
 }
 
 module "db" {
-  source          = "../modules/db"
-  public_key_path = var.public_key_path
-  db_disk_image   = var.db_disk_image
-  subnet_id       = var.subnet_id
+  private_key_path = var.private_key_path
+  source           = "../modules/db"
+  public_key_path  = var.public_key_path
+  db_disk_image    = var.db_disk_image
+  subnet_id        = var.subnet_id
 }
