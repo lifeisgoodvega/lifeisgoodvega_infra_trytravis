@@ -89,3 +89,5 @@ packer build -var-file=variables.json ./immutable.json
 4) puma.service заменён на puma.service.template
 
 5) Перед установкой и запуском reddit.service в puma.service.template прокидывается DATABASE_URL
+
+Файлы storage-bucket.tf и директория vpc созданы только для того, чтобы пройти travis
