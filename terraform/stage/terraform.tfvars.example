@@ -1,11 +1,7 @@
 cloud_id                 = "a"
 folder_id                = "b"
-zone                     = "c"
-instance_zone            = "d"
 image_id                 = "e"
 public_key_path          = "~/.ssh/yc.pub"
 private_key_path         = "~/.ssh/yc"
 subnet_id                = "f"
 service_account_key_file = "/tmp/example.json"
-reddit_listener_port     = 9292
-instances_count          = 2
