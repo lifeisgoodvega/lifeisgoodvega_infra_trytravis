@@ -1,0 +1,7 @@
+cloud_id                 = "a"
+folder_id                = "b"
+image_id                 = "e"
+public_key_path          = "~/.ssh/yc.pub"
+private_key_path         = "~/.ssh/yc"
+subnet_id                = "f"
+service_account_key_file = "/tmp/example.json"

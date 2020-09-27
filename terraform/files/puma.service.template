@@ -7,7 +7,7 @@ After=network.target
 Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu/reddit
-ExecStart=/bin/bash -lc 'puma'
+ExecStart=/bin/bash -lc 'DATABASE_URL={{db_url}} puma'
 Restart=always
 
 [Install]
