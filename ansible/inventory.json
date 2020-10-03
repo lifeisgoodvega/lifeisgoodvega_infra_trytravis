@@ -1,0 +1,7 @@
+{
+    "app": ["${app_host}"],
+    "db": ["${db_host}"],
+    "_meta": {
+        "hostvars": {}
+    }
+}
