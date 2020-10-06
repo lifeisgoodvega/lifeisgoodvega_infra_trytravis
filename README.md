@@ -14,7 +14,8 @@ consul % ssh -J appuser@84.201.155.49 appuser@10.129.0.19
 Host someinternalhost
 	Hostname 10.129.0.19
 	User appuser
-	ProxyJump bastion```
+	ProxyJump bastion
+```
 
 Примечание к домашнему заданию - пришлось установить iptables для запуска vpn сервера, без него pritunl
 писал ошибки в лог, но UI делала вид, что всё нормально, хотя сервер не стартовал
@@ -37,7 +38,8 @@ testapp_port = 9292
   --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
   --network-interface subnet-name=default-ru-central1-b,nat-ip-version=ipv4 \
   --metadata serial-port-enable=1 \
-  --metadata-from-file user-data=./metadata.yaml```
+  --metadata-from-file user-data=./metadata.yaml
+  ```
 
 # Домашнее задание 5
 
