@@ -7,3 +7,4 @@
 *.tfvars
 *.retry
 .terraform/
+jdauphant.nginx
