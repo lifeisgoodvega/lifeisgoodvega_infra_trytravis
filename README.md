@@ -125,3 +125,7 @@ Work in progress
 # Домашнее задание 9
 
 Work in progress
+
+# Домашнее задание 10
+
+Work in progress
