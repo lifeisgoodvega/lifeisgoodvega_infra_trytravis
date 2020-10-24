@@ -10,12 +10,15 @@ if args.list:
     output = subprocess.check_output(['terraform', 'show'])
     app_host = re.search("external_ip_address_app = \"([0-9.]+)\"", output).group(1)
     db_host = re.search("external_ip_address_db = \"([0-9.]+)\"", output).group(1)
+    db_intra_host = re.search("internal_ip_address_db = \"([0-9.]+)\"", output).group(1)
 
     inventory_template = str()
     with open(os.path.join(dir_path, 'inventory.json')) as file:
         inventory_template = file.read()
 
-    inventory = inventory_template.replace("${app_host}", app_host).replace("${db_host}", db_host)
+    inventory = inventory_template.replace("${app_host}", app_host)
+    inventory = inventory.replace("${db_host}", db_host)
+    inventory = inventory.replace("${db_intra_host}", db_intra_host)
     print inventory
     exit(0)
 else:
