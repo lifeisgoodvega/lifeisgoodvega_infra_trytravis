@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Otus-DevOps-2020-08/lifeisgoodvega_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2020-08/lifeisgoodvega_infra)
+
 # lifeisgoodvega_infra
 lifeisgoodvega Infra repository
 
