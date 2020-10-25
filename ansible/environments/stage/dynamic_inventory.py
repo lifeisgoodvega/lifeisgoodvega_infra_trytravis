@@ -1,12 +1,13 @@
 #!/usr/bin/python
 import re, subprocess, argparse, os
 dir_path = os.path.dirname(os.path.realpath(__file__))
+env_dir = 'stage'
 
 parser = argparse.ArgumentParser(description='Expecting a --list argument')
 parser.add_argument('--list', help='Return json with dynamicaly requested hosts addresses', action="store_true")
 args = parser.parse_args()
 if args.list:
-    os.chdir(os.path.join(dir_path, '..', 'terraform', 'stage'))
+    os.chdir(os.path.join(dir_path, '../../..', 'terraform', env_dir))
     output = subprocess.check_output(['terraform', 'show'])
     app_host = re.search("external_ip_address_app = \"([0-9.]+)\"", output).group(1)
     db_host = re.search("external_ip_address_db = \"([0-9.]+)\"", output).group(1)
