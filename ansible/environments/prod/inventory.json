@@ -1,0 +1,18 @@
+{
+    "app": {
+        "hosts": ["${app_host}"],
+        "vars": {
+            "db_host": "${db_intra_host}"
+        }
+    },
+    "db": {
+        "hosts": ["${db_host}"],
+        "vars": {
+            "mongo_bind_ip": "${db_intra_host}"
+        }
+    },
+    "_meta": {
+        "hostvars": {
+        }
+    }
+}

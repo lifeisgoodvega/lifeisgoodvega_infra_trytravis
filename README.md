@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Otus-DevOps-2020-08/lifeisgoodvega_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2020-08/lifeisgoodvega_infra)
+
 # lifeisgoodvega_infra
 lifeisgoodvega Infra repository
 
@@ -127,3 +129,5 @@ appserver                  : ok=2    changed=1    unreachable=0    failed=0
 
 Для дополнительного задания был переиспользован python-скрипт, который получает выходные параметры из terraform state'а. В данном случае
 он также получает внутренний ip db-хоста
+
+# Домашнее задание 9
