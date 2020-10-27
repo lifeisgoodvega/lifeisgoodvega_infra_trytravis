@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Otus-DevOps-2020-08/lifeisgoodvega_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2020-08/lifeisgoodvega_infra)
+
 # lifeisgoodvega_infra
 lifeisgoodvega Infra repository
 
@@ -120,7 +122,13 @@ appserver                  : ok=2    changed=1    unreachable=0    failed=0
 
 # Домашнее задание 8
 
-Work in progress
+Были созданы несолько playbook'ов
+- С одним play'ем
+- C раздельными play'ами
+- Отдельные для app-хоста, db-хоста и deploy reddit'а
+
+Для дополнительного задания был переиспользован python-скрипт, который получает выходные параметры из terraform state'а. В данном случае
+он также получает внутренний ip db-хоста
 
 # Домашнее задание 9
 
@@ -132,3 +140,5 @@ Work in progress
 В первом дополнительном задании был переиспользован python скрипт из предыдущей домашней работы. Копии скрипта расположены в env'ах prod'а и stage'а
 
 Во втором дополнительном задани были добавлены скрипты install_dep.sh и check.sh. К сожалению, ansible-lint 4.2.0 возвращал странную ошибку о конфликте тасков git и __line__ при проверке playbook'ов на travis'е, что похоже на баг, поэтому пришлось language сменить на python и поверх pip3 поставить ansible-lint 4.3.5
+
+# Домашнее задание 10

@@ -6,6 +6,8 @@
 *.tfstate.backup
 *.tfvars
 *.retry
+__pycache__
+*.log
 .terraform/
 .vagrant/
 *.log
